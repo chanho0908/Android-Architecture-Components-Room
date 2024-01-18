@@ -1,0 +1,18 @@
+package kr.co.lion.roompractice.room_flow_coroutine.db
+
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "user_table")
+data class UserEntity (
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    var id: Int = 0,
+    @ColumnInfo(name = "name")
+    var name: String = "",
+    @ColumnInfo(name = "age")
+    var age: Int = 0
+
+
+)
