@@ -5,18 +5,26 @@ plugins {
 }
 
 android {
-    namespace = "kr.co.lion.prctice_migration"
+    namespace = "kr.co.lion.automigration"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "kr.co.lion.prctice_migration"
+        applicationId = "kr.co.lion.automigration"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas")
+            }
+        }
     }
+
+
 
     buildTypes {
         release {
@@ -34,7 +42,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
     buildFeatures {
         viewBinding = true
     }

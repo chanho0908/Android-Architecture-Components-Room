@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "kr.co.lion.prctice_migration"
+    namespace = "kr.co.lion.typeconverter"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "kr.co.lion.prctice_migration"
+        applicationId = "kr.co.lion.typeconverter"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -34,7 +34,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
     buildFeatures {
         viewBinding = true
     }
@@ -64,4 +63,5 @@ dependencies {
 
     // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:2.6.1")
+
 }
