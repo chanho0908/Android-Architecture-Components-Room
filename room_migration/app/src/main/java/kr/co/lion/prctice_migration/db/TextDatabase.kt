@@ -13,7 +13,6 @@ import kr.co.lion.prctice_migration.db.entity.TextEntity2
 abstract class TextDatabase : RoomDatabase(){
     abstract fun textDao() : TextDao
     abstract fun textDao2() : TextDao2
-
     companion object{
         @Volatile
         private var INSTANCE : TextDatabase? = null

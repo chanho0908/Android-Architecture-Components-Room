@@ -2,21 +2,14 @@ package kr.co.lion.automigration.db
 
 import android.content.Context
 import androidx.room.*
-@Database(
-    entities = [TextEntity::class],
-    version = 1
-)
-
+@Database(entities = [TextEntity::class], version = 1)
 @TypeConverters(MyConverters::class)
 abstract class TextDatabase : RoomDatabase(){
-
     abstract fun textDao() : TextDao
-
     companion object {
 
         @Volatile
         private var INSTANCE : TextDatabase? = null
-
         fun getDatabase(
             context: Context
         ) : TextDatabase {
@@ -32,8 +25,5 @@ abstract class TextDatabase : RoomDatabase(){
                 instance
             }
         }
-
     }
-
-
 }
