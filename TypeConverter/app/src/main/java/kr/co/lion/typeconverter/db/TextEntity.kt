@@ -46,5 +46,13 @@ class MyConverters {
         return BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
     }
 
+    @TypeConverter
+    fun listToJson(list: MutableList<TextEntity>): String{
+        return Gson.toJson(list)
+    }
 
+    @TypeConverter
+    fun jsonToList(value: String): MutableList<TextEntity>{
+        return Gson.fromJson(value, Array<TextEntity>::class.java).toMutableLust()
+    }
 }
